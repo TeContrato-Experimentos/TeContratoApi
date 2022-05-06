@@ -62,8 +62,8 @@ namespace TeContrato.API
             // DbContext Configuration
             services.AddDbContext<AppDbContext>(options =>
             {
-                options.UseInMemoryDatabase("super-market-api-in-memory");
-                //options.UseMySQL(Configuration.GetConnectionString("DefaultConnection"));
+                //options.UseInMemoryDatabase("super-market-api-in-memory");
+                options.UseMySQL(Configuration.GetConnectionString("DefaultConnection"));
             });
 
             // Dependency Injection Configuration
